@@ -1,0 +1,46 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Application Name Documentation",
+    "descriptions": "This is an API ...",
+    "version": "1.0.0",
+    "contact": {
+      "email": "dhemes.mota@gmail.com"
+    }
+  },
+  "paths": {
+    "/auth": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Criar uma sessão",
+        "descriptions": "Criar uma sessão de login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "email": "example@example.com",
+                  "password": "123456"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    }
+  }
+}
