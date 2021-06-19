@@ -40,6 +40,31 @@
             "description": "Created"
           }
         }
+      },
+      "get": {
+        "tags": ["Authentication"],
+        "summary": "Buscar dados do usuário autenticado",
+        "description": "Exibir dados do usuário autenticado",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
